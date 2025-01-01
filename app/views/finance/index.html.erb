@@ -1,0 +1,17 @@
+<h1>FX トレード履歴</h1>
+<%= form_with url: finance_upload_path, local: true, multipart: true do |form| %>
+  <div>
+    <label for="item_name">プラットフォーム:</label>
+    <%= select_tag :platform, options_for_select(@platform, 'exness'), prompt: 'データを追加するデータベースを選択してください。' %>
+  </div>
+  <div>
+    <label for="csv_file">CSVファイル:</label>
+    <%= file_field_tag :csv_file, accept: '.csv' %>
+  </div>
+
+  <div>
+    <%= submit_tag 'Upload' %>
+  </div>
+<% end %>
+
+<%= link_to "< EXNESS >", exness_path %>

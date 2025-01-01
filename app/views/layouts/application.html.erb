@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'Home', root_path %> | 
+      <%= link_to 'Finance', finance_path %> | 
+      <%= link_to 'exness', exness_path %>
+    </nav>
+    
     <%= yield %>
   </body>
 </html>

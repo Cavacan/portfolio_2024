@@ -1,0 +1,33 @@
+<h1>Exness</h1>
+<div id="trade-data">
+  <div class="trade-entry">
+    <table>
+      <tr>
+        <th>Open Time:</th>
+        <th>Type:</th>
+        <th>Size:</th>
+        <th>Item:</th>
+        <th>Open Price:</th>
+        <th>Close Time:</th>
+        <th>Close Price:</th>
+        <th>Commission</th>
+        <th>Trade P/L:</th>
+      </tr>
+
+      <% @trade.each do |trade| %>
+        <tr>
+          <td><%= trade.id %></td>
+          <td><%= trade.open_time %></td>
+          <td><%= trade.type %></td>
+          <td><%= trade.size %></td>
+          <td><%= trade.item %></td>
+          <td><%= trade.open_price %></td>
+          <td><%= trade.close_time %></td>
+          <td><%= trade.close_price %></td>
+          <td><%= trade.commission %></td>
+          <td><%= trade.trade_pl %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
