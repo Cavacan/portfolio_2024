@@ -1,5 +1,5 @@
 class FinanceController < ApplicationController
-  require 'csv'
+  require 'CSV'
   def index
     @platform = [
       ['Exness', 'exness'],
@@ -9,13 +9,13 @@ class FinanceController < ApplicationController
 
   def upload
     if params[:csv_file].present?
-      csv.foreach(params[:csv_file].path, headers: true) do |row|
+      CSV.foreach(params[:csv_file].path, headers: true) do |row|
         Trade.create!(
           platform: params[:platform],
           open_time: row['Open Time'],
-          type: row['Type'],
-          size: row['Size'],
-          item: row['Item'],
+          trade_type: row['Type'],
+          trade_size: row['Size'],
+          trade_item: row['Item'],
           open_price: row['Open Price'],
           close_time: row['Close Time'],
           close_price: row['Close Price'],

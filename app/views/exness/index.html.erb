@@ -1,8 +1,9 @@
 <h1>Exness</h1>
 <div id="trade-data">
   <div class="trade-entry">
-    <table>
+    <table class="trade-table">
       <tr>
+        <th>ID</th>
         <th>Open Time:</th>
         <th>Type:</th>
         <th>Size:</th>
@@ -18,9 +19,9 @@
         <tr>
           <td><%= trade.id %></td>
           <td><%= trade.open_time %></td>
-          <td><%= trade.type %></td>
-          <td><%= trade.size %></td>
-          <td><%= trade.item %></td>
+          <td><%= trade.trade_type %></td>
+          <td><%= trade.trade_size %></td>
+          <td><%= trade.trade_item %></td>
           <td><%= trade.open_price %></td>
           <td><%= trade.close_time %></td>
           <td><%= trade.close_price %></td>
