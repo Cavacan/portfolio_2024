@@ -1,10 +1,19 @@
-<h1>遥風 ポートフォリオ(仮)</h1>
+<div class="portfolio-container">
+  <h1 class="portfolio-title">遥風 ポートフォリオ(仮)</h1>
+  
+  <p class="portfolio-subtitle">資料一覧</p>
+  
+  <div class="portfolio-links">
+    <div class="portfolio-card">
+      <%= link_to '> 令和6年度決算資料', 'https://docs.google.com/presentation/d/1jCGt67M9EB0_QiMhl-sWDHKKqdmj9oS-/edit#slide=id.p10', class: 'portfolio-button' %>
+    </div>
 
-<p>資料一覧</p>
-<div>
-  <%= link_to '> 令和6年度決算資料', 'https://docs.google.com/presentation/d/1jCGt67M9EB0_QiMhl-sWDHKKqdmj9oS-/edit#slide=id.p10' %>
-</div>
+    <div class="portfolio-card">
+      <%= link_to '> FX トレード履歴', finance_path, class: 'portfolio-button' %>
+    </div>
 
-<div>
-  <%= link_to '> FX トレード履歴', finance_path %>
+    <div class="portfolio-card">
+      <%= link_to '> 株式　取引履歴', 'https://docs.google.com/spreadsheets/d/1QRd0DGQzMBC21gmf970be4ELc37Xq58hq2rGswNyvVc/edit?usp=sharing', class: 'portfolio-button' %>
+    </div>
+  </div>
 </div>
