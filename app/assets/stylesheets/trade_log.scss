@@ -1,0 +1,38 @@
+/* テーブルの基本スタイル */
+.trade-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ヘッダーのスタイル */
+.trade-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* セルのスタイル */
+.trade-table th,
+.trade-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+/* 奇数行 (2N-1) に色を付ける */
+.trade-table tbody tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+/* 偶数行 */
+.trade-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* ホバー時のスタイル */
+.trade-table tbody tr:hover {
+  background-color: #ffcd4f;
+}

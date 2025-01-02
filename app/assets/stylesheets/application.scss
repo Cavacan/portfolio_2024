@@ -1,41 +1,54 @@
 @import "home";
 @import "finance";
+@import "trade_log";
 
-/* テーブルの基本スタイル */
-.trade-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 14px;
-  text-align: left;
+/* ヘッダー */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
 }
 
-/* ヘッダーのスタイル */
-.trade-table thead tr {
-  background-color: #009879;
-  color: #ffffff;
+/* パンくずリスト */
+.breadcrumb {
+  position: fixed; /* 画面上部に固定 */
+  top: 50px; /* ヘッダーの下に配置 */
+  left: 0;
+  right: 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000; /* 他の要素より上に表示 */
+}
+
+.breadcrumb ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #0078d7;
+}
+
+/* メインコンテンツ */
+.content {
+  margin-top: 50px; /* ヘッダーとパンくずリストの高さ分余白を確保 */
+  padding: 20px;
+}
+
+/* フッター */
+footer {
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  font-weight: bold;
-}
-
-/* セルのスタイル */
-.trade-table th,
-.trade-table td {
-  padding: 12px 15px;
-  border: 1px solid #dddddd;
-}
-
-/* 奇数行 (2N-1) に色を付ける */
-.trade-table tbody tr:nth-child(odd) {
-  background-color: #f3f3f3;
-}
-
-/* 偶数行 */
-.trade-table tbody tr:nth-child(even) {
-  background-color: #ffffff;
-}
-
-/* ホバー時のスタイル */
-.trade-table tbody tr:hover {
-  background-color: #ffcd4f;
 }

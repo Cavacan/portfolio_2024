@@ -11,12 +11,12 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to 'Home', root_path %> | 
-      <%= link_to 'Finance', finance_path %> | 
-      <%= link_to 'exness', exness_path %>
+    <nav class="breadcrumb">
+      <%= render 'shared/breadcrumb' %>
     </nav>
-    
-    <%= yield %>
+
+    <main class="content">
+      <%= yield %>
+    </main>
   </body>
 </html>
